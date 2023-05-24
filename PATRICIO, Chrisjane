@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.green,
+        appBar: AppBar(
+          title: Text('Column Layout'),
+          backgroundColor: Colors.orange,
+        ),
+        body: Align(
+          alignment: Alignment.center,
+          child: Container(
+            width: 300,
+            height: 200,
+            padding: EdgeInsets.all(16),
+            color: Colors.white,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('Name', style: TextStyle(fontSize: 20)),
+                Text('College', style: TextStyle(fontSize: 20)),
+                Text('Course', style: TextStyle(fontSize: 20)),
+                Text('Year', style: TextStyle(fontSize: 20)),
+              ],
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
