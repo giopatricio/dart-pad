@@ -1,0 +1,63 @@
+import 'package:flutter/material.dart';
+
+class AboutFlutterScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.green[100],
+      appBar: AppBar(
+        title: const Text('About Flutter'),
+        backgroundColor: Colors.orange,
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 200,
+            height: 50,
+            color: Colors.orange[100],
+            margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
+            child: const Center(
+              child: Text('About Flutter'),
+            ),
+          ),
+          SafeArea(
+            child: Container(
+              width: 100,
+              height: 50,
+              color: Colors.orange,
+              margin: const EdgeInsets.fromLTRB(10, 10, 0, 0),
+              child: const Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MainScreen(),
+                      ),
+                    );
+                  },
+                  child: Text('Main Screen'),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class MainScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.green,
+      appBar: AppBar(
+        title: const Text('Main Screen'),
+        backgroundColor: Colors.orange,
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment
